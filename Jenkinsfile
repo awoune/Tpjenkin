@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_361'
-        PYTHON_HOME = 'C:\\Users\\cdied\\AppData\\Local\\Microsoft\\WindowsApps'
+        PYTHON_HOME = 'C:\\env\\python-3.12.4-embed-amd64'
         PATH = "${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
     }
     stages {
