@@ -1,7 +1,9 @@
 pipeline {
     agent any
     environment {
-        PATH = "${env.PATH}:/usr/bin/python3"
+        JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_361'
+        PYTHON_HOME = 'C:\\Users\\cdied\\AppData\\Local\\Microsoft\\WindowsApps'
+        PATH = "${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
     }
     stages {
         stage('Checkout') {
@@ -17,6 +19,9 @@ pipeline {
                         // Add your Unix-specific build commands here
                     } else {
                         bat 'echo "Running on Windows"'
+                        bat 'javac HelloWorld.java'
+                        bat 'java HelloWorld'
+                        bat 'python hello.py'
                         // Add your Windows-specific build commands here
                     }
                 }
