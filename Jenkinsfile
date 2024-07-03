@@ -19,7 +19,6 @@ pipeline {
                         // Add your Unix-specific build commands here
                     } else {
                         bat 'echo "Running on Windows"'
-                        bat 'javac HelloWorld.java'
                         bat 'java HelloWorld'
                         bat 'python hello.py'
                         // Add your Windows-specific build commands here
